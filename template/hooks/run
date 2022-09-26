@@ -20,7 +20,7 @@ export DOCKER_TAG=${VARIANT}
 export IMAGE_NAME=${DOCKER_REPO}:${DOCKER_TAG}
 
 # Execute hooks in given order
-IFS=',' read -ra STEPS <<< "${1:-build,test}"
+IFS=',' read -ra STEPS <<< "${1:-build,test,push}"
 for step in "${STEPS[@]}"
 do
     for hook in "pre_${step}" "${step}" "post_${step}"; do
