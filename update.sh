@@ -52,7 +52,7 @@ function version_greater_or_equal() {
 
 php_versions=( "7.3" )
 
-dockerRepo="monogramm/docker-dolibarr"
+dockerRepo="iderr/docker-dolibarr"
 latests=( $( curl -fsSL 'https://api.github.com/repos/dolibarr/dolibarr/tags' |tac|tac| \
 	grep -oE '[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+' | \
 	sort -urV )
