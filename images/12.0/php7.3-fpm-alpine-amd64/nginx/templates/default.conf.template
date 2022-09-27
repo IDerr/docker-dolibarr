@@ -20,6 +20,7 @@ server {
 		proxy_send_timeout          3600;
 		proxy_read_timeout          3600;
 		send_timeout                3600;
+        client_max_body_size 		50M;
 
 		include fastcgi_params;
 		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
