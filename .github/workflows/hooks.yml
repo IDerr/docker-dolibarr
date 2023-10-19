@@ -14,9 +14,9 @@ jobs:
     strategy:
       matrix:
         version: ['12.0', '13.0', '14.0', '15.0', '16.0', '17.0', '18.0']
-        php: ['7.3']
+        php: ['7.3', '8.0']
         archi: ['amd64']
-        variant: ['apache', 'fpm', 'fpm-alpine']
+        variant: ['fpm', 'fpm-alpine']
 
     steps:
       - name: Check Out Repo
